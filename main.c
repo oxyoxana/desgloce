@@ -4,7 +4,7 @@
 int main() {
 
     float cF;
-    int resto, resto500, resto200, cE, cP;
+    int resto, resto500, resto200, resto100, resto50, resto20, resto10, resto5, resto2, resto1,cE, cP;
     //importe2=(int)importe;
     /*
     printf("Ingrese una cantidad\n");
@@ -14,64 +14,70 @@ int main() {
     
     
     //cP=cE;
-    cP=1701;
+    cP=1470;
     
-   
     printf("> %i \n", cP);
-    resto500=(cP / 500);
-    if (resto500 != 0){
-        printf("500> %i \n", resto500);
+    resto=(cP / 500);
+    if (resto != 0){
+        printf("500> %i \n", resto);
     }
     resto=(cP % 500);
+                                                    printf("resto: %i \n", resto);
     
-    if (resto != 0){
-        printf("200> %i \n", resto);
+    resto200=(resto / 200);
+    if (resto200 != 0){
+        printf("200> %i \n", resto200);
     }
-    resto=(cP % 200);
+    resto=(resto % 200);
+                                                    printf("resto: %i \n", resto);
+    resto100=(resto / 100);
+    if (resto100 != 0){
+        printf("100> %i \n", resto100);
+    }
+    resto=(resto % 100);
+                                                    printf("resto: %i \n", resto);
     
-    if (resto != 0){
-        printf("100> %i \n", resto);
+    resto50=(resto / 50);
+    if (resto50 != 0){
+        printf("50> %i \n", resto50);
     }
-    resto=(cP % 100);
-    printf("resto> %i \n", resto);
-    
-    if (resto != 0){
-        printf("50> %i \n", resto);
-    }
-    resto=(cP % 50);
-    printf("resto> %i \n", resto);
+    resto=(resto % 50);
+                                                    printf("resto> %i \n", resto);
 
-    if (resto != 0){
-        printf("20> %i \n", resto);
+    resto20=(resto / 20);
+    if (resto20 != 0){
+        printf("20> %i \n", resto20);
     }
-    resto=(cP % 20);
-    printf("resto> %i \n", resto);
-    
-    if (resto != 0){
+    resto=(resto % 20);
+                                                    printf("resto> %i \n", resto);
+    resto10=(resto / 10);
+    if (resto10 != 0){
         printf("10> %i \n", resto);
     }
-    resto=(cP % 10);
-    printf("resto> %i \n", resto);
+    resto=(resto % 10);
+                                                    printf("resto> %i \n", resto);
     
-    if (resto != 0){
+    resto5=(resto / 5);
+    if (resto5 != 0){
         printf("5> %i \n", resto);
     }
-    resto=(cP % 5);
-    printf("resto> %i \n", resto);
-    
-    if (resto != 0){
+    resto=(resto % 5);
+                                                    printf("resto> %i \n", resto);
+    resto2=(resto / 2);
+    if (resto2 != 0){
         printf("2> %i \n", resto);
     }
-    resto=(cP % 2);
-    printf("resto> %i \n", resto);
+    resto=(resto % 2);
+                                                    printf("resto> %i \n", resto);
     
-    if (resto != 0){
+    resto1=(resto / 1);
+    if (resto1 != 0){
         printf("1> %i \n", resto);
     }
-    resto=(cP % 1);
-    printf("resto> %i \n", resto);
+    resto=(resto % 1);
+                                                    printf("resto> %i \n", resto);
     
-    /*
+    /* DECIMALES
     if (resto != 0){
         printf("0.50> %i \n", resto);
     }
