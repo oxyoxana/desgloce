@@ -1,12 +1,15 @@
+/*
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main() {
+int main3() {
 
     int resto, resto200, resto100, resto50, resto20, resto10, resto5, resto2, resto1, resto020, resto010, resto05, resto02, resto01 ;
     float cTotal;
-    int cEntera, cDecimal, billete;
+    int cEntera, cDecimal, billete, a;
+    int x[11] = {500, 200, 100, 50, 20, 10, 5, 2, 1};
     
     printf("Ingrese una cantidad\n");
     scanf("%f", &cTotal);
@@ -18,6 +21,102 @@ int main() {
     
     printf("Billete a empezar \n");
     scanf("%d", &billete);
+
+
+    if (billete == 500) {
+        //billete = 500;
+        a=x[0];
+    } else if (billete == 200) {
+        a=x[1];
+        //billete = 200;
+    } else if (billete == 100) {
+        billete = 100;
+        a=x[2];
+    } else if (billete == 50) {
+        billete = 50;
+        a=x[3];
+    } else {
+        printf("Billete no válido.\n");
+    }
+    
+    resto=(cEntera / billete);
+    printf("resto vale %i \n", resto);
+    
+    int b, c, i;
+    b=(resto % billete);
+    
+/*
+    for (c=0; c<=8; c++){
+        c=(b % billete);
+    }
+
+    c = 1;
+    c =(b % billete);
+    printf("b vale %i \n", b);
+    printf("c vale %i \n", c);
+    printf("billete vale %i \n", billete);
+    printf("resto vale %i \n", resto);
+    for (i=8;i<=0;i--){
+        printf("x[i]> %i \n", resto);
+    }
+    
+   // int i, a;
+    //for (i=0; i<=8; i++){
+
+        //a = x[i];
+        //printf("billetes y monedas: %i \n",a);
+/*
+        if (billete==200){
+            a=x[1];
+            printf("partir de: %i \n",a);
+        }
+*/
+
+
+/*
+        if (resto != 0){
+            printf("500> %i \n", resto);
+        }
+        resto=(cEntera % 500);
+
+        resto200=(resto / 200);
+        if (resto200 != 0){
+            printf("200> %i \n", resto200);
+        }
+        resto=(resto % 200);
+*/
+   // }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*
     if (billete == 500)
     {
         printf("Quiere usar un billete de 500\n");
@@ -69,6 +168,7 @@ int main() {
                                                        // printf("resto: %i \n", resto);
     }
    
+*/
 
     
     
@@ -94,6 +194,7 @@ int main() {
     resto=(resto % 100);
                                                     //printf("resto: %i \n", resto);
 */
+/*
     
     resto50=(resto / 50);
     if (resto50 != 0){
@@ -179,6 +280,10 @@ int main() {
     resto=(resto % 1);
                                                         //printf("resto> %i \n", resto);
     
+
     return 0;
+    
 }
 
+
+*/
