@@ -12,7 +12,7 @@ int main() {
 
     int cEntera, cDecimal, billete, billeteV;
     char stringNum[5];
-    float num, nearest;
+    float num;
     int x[] = {500, 200, 100, 50, 20, 10, 5, 2, 1};
     int z[] = {50, 20, 10, 5, 2, 1};
     
@@ -38,14 +38,14 @@ int main() {
     }
     while ((num<1) || (billeteV != 1) || (validarEntrada(stringNum)!=0) || (num < billete));
         if(num!=0){
-            printf("El número introducido es %f y el billete es %i\n", num, billete);
             cEntera= (int)num;
             //printf("entera %i\n", cEntera);
             cDecimal=ceil((num-cEntera)*100);
-            printf("decimal %i\n", cDecimal);
-            
+            //printf("decimal %i\n", cDecimal);
             //resto=(cEntera / billete);
             //printf("resto %d \n", resto);
+            
+            printf("El número introducido es %i,%i y el billete es %i:\n", cEntera, cDecimal, billete);
             
             //Calculo billete______________________________________________
             int i, posicionBillete, cantidadEntera;
@@ -53,23 +53,18 @@ int main() {
                 if (x[i]==billete)
                     posicionBillete=i;
             }
-            /*
-            for (i=posicionBillete; i<9; i++){
-                cantidadEuro=num / x[i];
-                num = num - (cantidadEuro * x[i]);
-                if (cantidadEuro > 0)
-                    printf("Unidades de %d Euros son %d, resto %f \n", x[i], cantidadEuro, num);
-            }
-*/ 
+
             for (i=posicionBillete; i<9; i++){
                 cantidadEntera=cEntera / x[i];
                 cEntera = cEntera - (cantidadEntera * x[i]);
-                if (cantidadEntera > 0)
+                if (cantidadEntera > 0){
+                    //printf("uno");
                     if (i<7){
                         printf("%d billetes de %d €\n", cantidadEntera, x[i]);
                     } else {
                         printf("%d monedas de %d €\n", cantidadEntera, x[i]);
                     }
+                }
             }
             
             //Calculo monedas______________________________________________
@@ -81,9 +76,10 @@ int main() {
             }
             for (j=posicionMonedas; j<6; j++){
             cantidadDecimal=cDecimal / z[j];
-                cDecimal = cDecimal - (cantidadDecimal * z[j]);
-                if (cantidadDecimal > 0)
-                    printf("%d monedas de %d centimos\n", cantidadDecimal, z[j]);
+            cDecimal = cDecimal - (cantidadDecimal * z[j]);
+                if (cantidadDecimal > 0){
+                    printf("%d monedas de %d céntimos\n", cantidadDecimal, z[j]);
+                }
             }
         }
     return 0;
